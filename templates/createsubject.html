@@ -15,11 +15,11 @@
 
   </head>
   <body>
-    <div class = "container" >
-    <form method = 'POST' style= "width = 70%;">
+    <div class = "container w-50"  >
+    <form method = 'POST' >
 {% csrf_token %}
 {{form|crispy}}
-<input class = "btn btn-primary" type = "submit" value = "submit">
+<input class = "btn btn-primary btn-lg" style = "display:block; margin:auto;" type = "submit" value = "submit">
 </form>
 </div>
     <!-- Optional JavaScript -->

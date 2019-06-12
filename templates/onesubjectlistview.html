@@ -16,12 +16,36 @@
   </head>
   <body>
     <div class = "container" >
-    <h1>{{objects.subject}}</h1>
+    <div class  ="row">
+    <div class = "col-4">
+    <h1 class ="lead" style="text-align:center; font-size:35px;">NAME</h1>
+    </div>
+    <div class = "col-4">
+    <h1 class ="lead" style="text-align:center;font-size:35px;">YOUTUBE ID</h1>
+    </div>
+    <div class = "col-4">
+    <h1 class ="lead" style="text-align:center;font-size:35px;">EDIT/DELETE</h1>
+    </div>
+    </div>
+
+     
     {% for obj in objects %}
-    <h5> {{obj.name}} </h5>
-    <a href = "{% url 'update-subject' obj.id %}">edit</a>
-    <a href = "{% url 'delete-subject' obj.id %}">delete</a>
-    {% endfor %}
+    <div class  ="row">
+    <div class = "col-4">
+    <h5 class ="lead" style="text-align:center; color:red; ">{{obj.name}} </h5>
+    </div>
+    <div class = "col-4">
+    <h4 class ="lead" style="text-align:center; color:red;">{{obj.link}} </h4>
+    </div>
+    <div class = "col-4">
+    <a href = "{% url 'update-subject' obj.id %}" class ="btn btn-primary" style="display:block; margin:auto; width:50%; margin-bottom:10px;">Edit</a>
+    <a href = "{% url 'delete-subject' obj.id %}" class ="btn btn-primary" style="display:block; margin:auto; width:50%; margin-bottom:10px;">Delete</a>
+    </div>
+    </div>
+
+    
+    
+    {% endfor %} 
     
 </div>
     <!-- Optional JavaScript -->

@@ -12,13 +12,42 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class = "container" >
-    <h1>DOUBTOUT</h1>
-    <a href = "{% url 'MATHS' %}"><button class="btn btn-primary">MATHS</button></a>
-    <a href = "{% url 'SCIENCE' %}"><button class="btn btn-primary">SCIENCE</button></a>
+    
+    <div class = "row">
+    <div class = "col-12">
+    <h1 style = "text-align:center; margin-bottom:50px; font-family: 'Handlee', cursive;">DoubtOut</h1>
+    </div>
+    </div>
+     <div class = "row">
+    <div class = "col-12">
+    <a href = "{% url 'api' %}"><button class="btn btn-primary" style = "display:block; margin: auto; margin-bottom:50px;">API</button></a>
+    </div>
+    </div>
+    <div class = "row">
+    <div class = "col-12">
+    <a href = "{% url 'create-subject' %}"><button class="btn btn-primary" style = "display:block; margin: auto; margin-bottom:50px;">Upload a Video Link</button></a>
+    </div>
+    </div>
+
+   
+
+    <div class = "row">
+    <div class = "col-12">
+    <a href = "{% url 'MATHS' %}"><button class="btn btn-primary" style = "display:block; margin: auto; margin-bottom:50px;">MATHS</button></a>
+    </div>
+    </div>
+    
+    
+    <div class = "row">
+    <div class = "col-12">
+    <a href = "{% url 'SCIENCE' %}" ><button class="btn btn-primary" style = "display:block; margin :auto; margin-bottom:50px;">SCIENCE</button></a>
+    </div>
+    </div>
+    </div>
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
