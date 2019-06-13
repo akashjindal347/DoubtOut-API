@@ -18,19 +18,19 @@
     <div class = "container" >
     <div class  ="row">
     <div class = "col-4">
-    <h1 class ="lead" style="text-align:center; font-size:35px;">NAME</h1>
+    <h1 class ="lead" style="text-align:center; ">NAME</h1>
     </div>
     <div class = "col-4">
-    <h1 class ="lead" style="text-align:center;font-size:35px;">YOUTUBE ID</h1>
+    <h1 class ="lead" style="text-align:center;">YOUTUBE ID</h1>
     </div>
     <div class = "col-4">
-    <h1 class ="lead" style="text-align:center;font-size:35px;">EDIT/DELETE</h1>
+    <h1 class ="lead" style="text-align:center;">EDIT/DELETE</h1>
     </div>
     </div>
 
      
     {% for obj in objects %}
-    <div class  ="row">
+    <div class  ="row" style ="margin-bottom:10px;">
     <div class = "col-4">
     <h5 class ="lead" style="text-align:center; color:red; ">{{obj.name}} </h5>
     </div>
@@ -38,8 +38,11 @@
     <h4 class ="lead" style="text-align:center; color:red;">{{obj.link}} </h4>
     </div>
     <div class = "col-4">
-    <a href = "{% url 'update-subject' obj.id %}" class ="btn btn-primary" style="display:block; margin:auto; width:50%; margin-bottom:10px;">Edit</a>
-    <a href = "{% url 'delete-subject' obj.id %}" class ="btn btn-primary" style="display:block; margin:auto; width:50%; margin-bottom:10px;">Delete</a>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary"><a href = "{% url 'update-subject' obj.id %}" style="color:white;" >Edit</a></button>
+           
+            <button type="button" class="btn btn-dark"><a href = "{% url 'delete-subject' obj.id %}" style="color:white;" >Delete</a></button>
+          </div>
     </div>
     </div>
 
