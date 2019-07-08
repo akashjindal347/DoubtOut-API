@@ -1,0 +1,103 @@
+.main_body{
+    display:flex;
+    margin-top: 3rem;
+    align-items: flex-start;
+}
+
+.main_body_center{
+    flex-wrap: wrap;
+    padding: 50px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.intro_body{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.supcard_top,
+.supcard_mid{
+    display: flex;
+    align-content: space-between;
+}
+
+.startup_logo {
+    align-content: center;
+}
+
+.supcard_mid h5{
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.supcard_mid br{
+    line-height: 0px;
+}
+
+.supcard_mid p{
+    line-height: 1.1; 
+}
+
+.location,
+.duration,
+.Start,
+.applyBy{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.pnbutton{
+    text-align: center;
+}
+
+.pre{
+    text-align: left;
+}
+
+.nxt{
+    text-align: right;
+}
+
+.main_body_right{
+    padding-top: 50px;
+}
+
+.subs button{
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width:450px){
+    .main_body_center{
+        padding: 40px;
+        padding-top: 20px;
+    }
+    
+    .main_body_right{
+        padding-top: 20px;
+        margin: 25px;
+    }
+    
+    .intro_body{
+        font-size: 16px;
+        text-align: justify;
+        padding-bottom: 35px;
+    }
+    
+    .supcard_top,
+    .supcard_mid{
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .location,
+    .duration,
+    .Start,
+    .applyBy{
+        padding: 15px;
+    }
+}

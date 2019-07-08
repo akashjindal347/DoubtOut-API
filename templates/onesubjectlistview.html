@@ -15,36 +15,38 @@
 
   </head>
   <body>
-    <div class = "container" >
-    <div class  ="row">
-    <div class = "col-4">
-    <h1 class ="lead" style="text-align:center; ">NAME</h1>
-    </div>
-    <div class = "col-4">
-    <h1 class ="lead" style="text-align:center;">YOUTUBE ID</h1>
-    </div>
-    <div class = "col-4">
-    <h1 class ="lead" style="text-align:center;">EDIT/DELETE</h1>
-    </div>
-    </div>
+    
 
      
+
     {% for obj in objects %}
-    <div class  ="row" style ="margin-bottom:10px;">
-    <div class = "col-4">
-    <h5 class ="lead" style="text-align:center; color:red; ">{{obj.name}} </h5>
-    </div>
-    <div class = "col-4">
-    <h4 class ="lead" style="text-align:center; color:red;">{{obj.link}} </h4>
-    </div>
-    <div class = "col-4">
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary"><a href = "{% url 'update-subject' obj.id %}" style="color:white;" >Edit</a></button>
-           
-            <button type="button" class="btn btn-dark"><a href = "{% url 'delete-subject' obj.id %}" style="color:white;" >Delete</a></button>
+    <div class="card" style="margin: 20px; background-color: white; border: none;box-shadow: 3px 5px 6px #ccc;
+     " >
+      <div class="card-body">
+        <div class  ="row" style ="">
+          <div class = "col-md-3 col-sm-12">
+              <h5 class ="lead" style=" font-weight: bold;">Name: </h5>
+          <h5 class ="lead" style="font-weight: bold; color: #f5036b; ">{{obj.name}} </h5>
           </div>
+          <div class = "col-md-3 col-sm-12">
+              <h5 class ="lead" style=" font-weight: bold;">Link: </h5>
+          <h4 class ="lead" style="font-weight: bold; color: #f5036b;">{{obj.link}} </h4>
+          </div>
+          <div class = "col-md-3 col-sm-12">
+              <h5 class ="lead" style=" font-weight: bold;">Description: </h5>
+          <h4 class ="lead" style=" color: #f5036b;">{{obj.description}} </h4>
+          </div>
+          <div class = "col-md-3 col-sm-12">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary" style="background-color: #f5036b; border:none; " ><a href = "{% url 'update-subject' obj.id %}" style="color:white;" >Edit</a></button>
+                 
+                  <button type="button" class="btn btn-dark"><a href = "{% url 'delete-subject' obj.id %}" style="color:white;" >Delete</a></button>
+                </div>
+          </div>
+          </div>
+      </div>
     </div>
-    </div>
+    
 
     
     
