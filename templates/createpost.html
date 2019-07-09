@@ -15,17 +15,12 @@
 
   </head>
   <body>
-    <div class = "container" >
-      {% if obj.title %}
-    <h1>Delete {{obj.title}}</h1>
-    {% else %}
-    <h1>Delete {{obj.name}}</h1>
-    {% endif %}
-   <form method = "POST">
-   {% csrf_token %}
-   <input type = "submit" class = "btn btn-primary" style="margin-bottom:10px;" value = "YES">
-   </form>
-    <a href = "{% url 'home' %}"><button class="btn btn-dark">No</button></a>
+    <div class = "container w-50"  >
+    <form method = 'POST' >
+{% csrf_token %}
+{{form|crispy}}
+<input class = "btn btn-primary btn-lg" style = "display:block; margin:auto;" type = "submit" value = "submit">
+</form>
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
